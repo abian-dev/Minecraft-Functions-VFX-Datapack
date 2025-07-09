@@ -1,4 +1,4 @@
 ## Runs Frames
 # based on frame rate
-scoreboard players remove @s kits.frame.rate 1
-$execute if score @s kits.frame.rate matches ..0 run function kits:generic/functions/frame_step/step {"frameRate":"$(frameRate)","filepath":"$(filepath)"}
+scoreboard players remove @s generic.frame.rate 1
+$execute if score @s generic.frame.rate matches ..0 run function packname:generic/functions/frame_step/step {"frameRate":"$(frameRate)","filepath":"$(filepath)"}

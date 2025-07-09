@@ -1,4 +1,4 @@
-# example call: execute rotated ~180 0 positioned ~ ~-0.1 ~ run function kits:generic/vfx/player_outline/play_run {"particle":"flame"}
+# example call: execute rotated ~180 0 positioned ~ ~-0.1 ~ run function packname:generic/vfx/player_outline/play_run {"particle":"flame"}
 ## Plays Player Outline Running
 $particle $(particle) ^-0.00044507098678814305 ^0.5815865285828825 ^-0.31600634293311947
 $particle $(particle) ^-0.0010746258757240446 ^0.5996146218379494 ^0.036644302015642616

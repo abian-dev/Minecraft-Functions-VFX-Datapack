@@ -1,4 +1,4 @@
-# example call: execute rotated ~180 0 positioned ~ ~-0.4 ~ run function kits:generic/vfx/player_outline/play_sneak {"particle":"flame"}
+# example call: execute rotated ~180 0 positioned ~ ~-0.4 ~ run function packname:generic/vfx/player_outline/play_sneak {"particle":"flame"}
 ## Plays Player Outline Sneaking
 $particle $(particle) ^-0.006249999906867698 ^0.17953796834304392 ^0.29452945591525126
 $particle $(particle) ^-0.006249999906867698 ^0.1997233265071412 ^0.37548850557640456

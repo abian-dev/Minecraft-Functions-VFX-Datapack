@@ -1,12 +1,12 @@
 ## Controls Thickness
 # increase peak
-scoreboard players operation %vfxSlashCrescent.peak kits.dz += %vfxSlashCrescent.dist kits.constant
+scoreboard players operation %vfxSlashCrescent.peak generic.dz += %vfxSlashCrescent.dist generic.constant
 
 # reset crescent slash values
-scoreboard players set %vfxSlashCrescent.runItt kits.dz 0
-scoreboard players operation %vfxSlashCrescent.pos kits.x = %vfxSlashCrescent.r kits.x
-scoreboard players operation %vfxSlashCrescent.pos kits.y = %vfxSlashCrescent.r kits.y
-scoreboard players operation %vfxSlashCrescent.pos kits.z = %vfxSlashCrescent.r kits.z
+scoreboard players set %vfxSlashCrescent.runItt generic.dz 0
+scoreboard players operation %vfxSlashCrescent.pos generic.x = %vfxSlashCrescent.r generic.x
+scoreboard players operation %vfxSlashCrescent.pos generic.y = %vfxSlashCrescent.r generic.y
+scoreboard players operation %vfxSlashCrescent.pos generic.z = %vfxSlashCrescent.r generic.z
 scoreboard players reset %vfxSlashCrescent.accSteps
 scoreboard players reset %vfxSlashCrescent.4A/dxd
 scoreboard players reset %vfxSlashCrescent.dxd
@@ -15,10 +15,10 @@ scoreboard players reset %vfxSlashCrescent.x-d/2
 scoreboard players reset %vfxSlashCrescent.parabolaOut
 
 # reset crescent slash pos
-execute store result entity @s Pos[0] double 0.01 run scoreboard players get %vfxSlashCrescent.r kits.x
-execute store result entity @s Pos[1] double 0.01 run scoreboard players get %vfxSlashCrescent.r kits.y
-execute store result entity @s Pos[2] double 0.01 run scoreboard players get %vfxSlashCrescent.r kits.z
+execute store result entity @s Pos[0] double 0.01 run scoreboard players get %vfxSlashCrescent.r generic.x
+execute store result entity @s Pos[1] double 0.01 run scoreboard players get %vfxSlashCrescent.r generic.y
+execute store result entity @s Pos[2] double 0.01 run scoreboard players get %vfxSlashCrescent.r generic.z
 
 # rerun crescent slash
-scoreboard players remove %vfxSlashCrescent.thickness kits.dz 1
-function kits:generic/vfx/slash_crescent/run
+scoreboard players remove %vfxSlashCrescent.thickness generic.dz 1
+function packname:generic/vfx/slash_crescent/run

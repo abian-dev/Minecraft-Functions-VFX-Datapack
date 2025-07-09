@@ -13,13 +13,13 @@ This is a reusable functions folder designed to simplify the use of generic util
 
 3. Run the setup function once using this in-game command:
    ```mcfunction
-   /function <datapackName>:setup
+   /function <datapackName>:generic/setup
 
 4. Add the following to your `tick` function:
    ```mcfunction
    execute as @e[type=area_effect_cloud] at @s run function <datapackName>:generic/vfx/assign_tasks/to_aecs
 
-5. Use an IDE such as VSCode to replace all instances of `kits:` with your own namespace.
+5. Use an IDE such as VSCode to replace all instances of `packname:` with your own namespace.
 
 ## How to Use
 To use the generic functions or VFX:
@@ -35,7 +35,7 @@ To use the generic functions or VFX:
   <tr>
     <td align="center">
       <a href="https://github.com/abian-dev">
-        <img src="https://avatars.githubusercontent.com/u/47409192?v=4" width="100" alt="abian-dev" /><br />
+        <img src="https://avatars.githubusercontent.com/u/210317798?v=4" width="100" alt="abian-dev" /><br />
         <sub><b>Abian</b></sub>
       </a><br />
     </td>

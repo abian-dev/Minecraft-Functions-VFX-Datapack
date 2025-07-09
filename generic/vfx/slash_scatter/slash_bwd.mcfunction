@@ -3,6 +3,6 @@
 $$(vfx)
 
 # recursive call
-scoreboard players remove @s kits.raycast.step 1
-execute unless block ~ ~ ~ #kits:passable run scoreboard players set @s kits.raycast.step 0
-$execute if score @s kits.raycast.step matches 0.. positioned ^ ^ ^-$(inaccuracy) run function kits:generic/vfx/slash_scatter/slash_bwd {"inaccuracy":"$(inaccuracy)","vfx":"$(vfx)"}
+scoreboard players remove @s generic.raycast.step 1
+execute unless block ~ ~ ~ #packname:passable run scoreboard players set @s generic.raycast.step 0
+$execute if score @s generic.raycast.step matches 0.. positioned ^ ^ ^-$(inaccuracy) run function packname:generic/vfx/slash_scatter/slash_bwd {"inaccuracy":"$(inaccuracy)","vfx":"$(vfx)"}

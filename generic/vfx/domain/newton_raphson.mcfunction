@@ -2,9 +2,9 @@
 # in = circleRadius
 ## Newton Raphson
 # b = in/a
-scoreboard players operation %vfxDomain.raphB kits.math = %vfxDomain.in kits.math
-scoreboard players operation %vfxDomain.raphB kits.math /= %vfxDomain.raphA kits.math
+scoreboard players operation %vfxDomain.raphB generic.math = %vfxDomain.in generic.math
+scoreboard players operation %vfxDomain.raphB generic.math /= %vfxDomain.raphA generic.math
 
 # a = (a+b)/2
-scoreboard players operation %vfxDomain.raphA kits.math += %vfxDomain.raphB kits.math
-scoreboard players operation %vfxDomain.raphA kits.math /= %vfxDomain.2 kits.constant
+scoreboard players operation %vfxDomain.raphA generic.math += %vfxDomain.raphB generic.math
+scoreboard players operation %vfxDomain.raphA generic.math /= %vfxDomain.2 generic.constant

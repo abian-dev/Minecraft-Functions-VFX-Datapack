@@ -1,5 +1,5 @@
 ## Animation Termination
 # reset
-data remove storage minecraft:animation frame
+data remove storage genfunc frame
 scoreboard players reset @s
 $$(end)

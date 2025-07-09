@@ -1,4 +1,4 @@
-# example call: function kits:generic/functions/slowcast/hit_entity {"slowcaster":"$(slowcaster)","hitEntity":"$(hitEntity)"}
+# example call: function packname:generic/functions/slowcast/hit_entity {"slowcaster":"$(slowcaster)","hitEntity":"$(hitEntity)"}
 ## Slowcast Hit Entity Function
 $$(hitEntity)
 $tag @e[tag=$(slowcaster)] remove $(slowcaster)

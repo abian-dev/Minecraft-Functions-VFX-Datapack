@@ -1,22 +1,22 @@
 ## Random Slash at Arbitrary Position on Sphere
 # measure closeness to point
-scoreboard players operation @s kits.x = %vfxSlashEncircle.px kits.x
-scoreboard players operation @s kits.y = %vfxSlashEncircle.py kits.y
-scoreboard players operation @s kits.x -= %vfxSlashEncircle.x kits.x
-scoreboard players operation @s kits.y -= %vfxSlashEncircle.y kits.y
+scoreboard players operation @s generic.x = %vfxSlashEncircle.px generic.x
+scoreboard players operation @s generic.y = %vfxSlashEncircle.py generic.y
+scoreboard players operation @s generic.x -= %vfxSlashEncircle.x generic.x
+scoreboard players operation @s generic.y -= %vfxSlashEncircle.y generic.y
 
 # rotate toward point
-$execute unless entity @s[scores={kits.x=-$(yaw)..$(yaw)}] run scoreboard players operation %vfxSlashEncircle.x kits.x += %vfxSlashEncircle.vx kits.x
-$execute unless entity @s[scores={kits.y=-$(pitch)..$(pitch)}] run scoreboard players operation %vfxSlashEncircle.y kits.y += %vfxSlashEncircle.vy kits.y
-execute store result entity @s Rotation[0] float 0.01 run scoreboard players get %vfxSlashEncircle.x kits.x
-execute store result entity @s Rotation[1] float 0.01 run scoreboard players get %vfxSlashEncircle.y kits.y
+$execute unless entity @s[scores={generic.x=-$(yaw)..$(yaw)}] run scoreboard players operation %vfxSlashEncircle.x generic.x += %vfxSlashEncircle.vx generic.x
+$execute unless entity @s[scores={generic.y=-$(pitch)..$(pitch)}] run scoreboard players operation %vfxSlashEncircle.y generic.y += %vfxSlashEncircle.vy generic.y
+execute store result entity @s Rotation[0] float 0.01 run scoreboard players get %vfxSlashEncircle.x generic.x
+execute store result entity @s Rotation[1] float 0.01 run scoreboard players get %vfxSlashEncircle.y generic.y
 
 # particles
 $execute at @s run $(vfx)
 
 # recurse until pos is close to point
-scoreboard players reset @s kits.z
-scoreboard players operation @s kits.z += @s kits.x
-scoreboard players operation @s kits.z += @s kits.y
-$execute if entity @s[scores={kits.z=-$(rotMaxRange)..$(rotMaxRange)}] run function kits:generic/vfx/slash_encircle/end
-$execute unless entity @s[scores={kits.z=-$(rotMaxRange)..$(rotMaxRange)}] at @s run function kits:generic/vfx/slash_encircle/slash with storage minecraft:vfx slashEncircle
+scoreboard players reset @s generic.z
+scoreboard players operation @s generic.z += @s generic.x
+scoreboard players operation @s generic.z += @s generic.y
+$execute if entity @s[scores={generic.z=-$(rotMaxRange)..$(rotMaxRange)}] run function packname:generic/vfx/slash_encircle/end
+$execute unless entity @s[scores={generic.z=-$(rotMaxRange)..$(rotMaxRange)}] at @s run function packname:generic/vfx/slash_encircle/slash with storage minecraft:vfx slashEncircle

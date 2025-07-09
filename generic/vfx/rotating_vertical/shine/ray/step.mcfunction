@@ -3,5 +3,5 @@
 $particle $(particle) ~ ~ ~
 
 # recursive call
-scoreboard players remove @s kits.raycast.step 1
-$execute if score @s kits.raycast.step matches 0.. positioned ^ ^ ^$(inaccuracy) run function kits:generic/vfx/rotating_vertical/shine/ray/step with storage minecraft:vfx shine
+scoreboard players remove @s generic.raycast.step 1
+$execute if score @s generic.raycast.step matches 0.. positioned ^ ^ ^$(inaccuracy) run function packname:generic/vfx/rotating_vertical/shine/ray/step with storage minecraft:vfx shine

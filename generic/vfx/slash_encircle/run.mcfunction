@@ -1,26 +1,26 @@
 ## Runs Encircling Slash
 # get vector from pos to point
-function kits:generic/vfx/slash_encircle/get with storage minecraft:vfx slashEncircle
+function packname:generic/vfx/slash_encircle/get with storage minecraft:vfx slashEncircle
 
 # find largest component
-scoreboard players operation %vfxSlashEncircle.max kits.z = %vfxSlashEncircle.absVx kits.x
-scoreboard players operation %vfxSlashEncircle.max kits.z > %vfxSlashEncircle.absVy kits.y
+scoreboard players operation %vfxSlashEncircle.max generic.z = %vfxSlashEncircle.absVx generic.x
+scoreboard players operation %vfxSlashEncircle.max generic.z > %vfxSlashEncircle.absVy generic.y
 
 # normalize vector to unit vector
-scoreboard players operation %vfxSlashEncircle.x kits.x *= %vfxSlashEncircle.100 kits.constant
-scoreboard players operation %vfxSlashEncircle.y kits.y *= %vfxSlashEncircle.100 kits.constant
-scoreboard players operation %vfxSlashEncircle.px kits.x *= %vfxSlashEncircle.100 kits.constant
-scoreboard players operation %vfxSlashEncircle.py kits.y *= %vfxSlashEncircle.100 kits.constant
-scoreboard players operation %vfxSlashEncircle.vx kits.x *= %vfxSlashEncircle.100 kits.constant
-scoreboard players operation %vfxSlashEncircle.vy kits.y *= %vfxSlashEncircle.100 kits.constant
-scoreboard players operation %vfxSlashEncircle.max kits.z /= %vfxSlashEncircle.inaccuracy kits.constant
-scoreboard players operation %vfxSlashEncircle.vx kits.x /= %vfxSlashEncircle.max kits.z
-scoreboard players operation %vfxSlashEncircle.vy kits.y /= %vfxSlashEncircle.max kits.z
+scoreboard players operation %vfxSlashEncircle.x generic.x *= %vfxSlashEncircle.100 generic.constant
+scoreboard players operation %vfxSlashEncircle.y generic.y *= %vfxSlashEncircle.100 generic.constant
+scoreboard players operation %vfxSlashEncircle.px generic.x *= %vfxSlashEncircle.100 generic.constant
+scoreboard players operation %vfxSlashEncircle.py generic.y *= %vfxSlashEncircle.100 generic.constant
+scoreboard players operation %vfxSlashEncircle.vx generic.x *= %vfxSlashEncircle.100 generic.constant
+scoreboard players operation %vfxSlashEncircle.vy generic.y *= %vfxSlashEncircle.100 generic.constant
+scoreboard players operation %vfxSlashEncircle.max generic.z /= %vfxSlashEncircle.inaccuracy generic.constant
+scoreboard players operation %vfxSlashEncircle.vx generic.x /= %vfxSlashEncircle.max generic.z
+scoreboard players operation %vfxSlashEncircle.vy generic.y /= %vfxSlashEncircle.max generic.z
 
 # slash
-function kits:generic/vfx/slash_encircle/slash with storage minecraft:vfx slashEncircle
+function packname:generic/vfx/slash_encircle/slash with storage minecraft:vfx slashEncircle
 
 # recursive call
-scoreboard players remove %vfxSlashEncircle.itt kits.z 1
-execute if score %vfxSlashEncircle.itt kits.z matches 0.. run function kits:generic/vfx/slash_encircle/run
-execute if score %vfxSlashEncircle.itt kits.z matches ..-1 run function kits:generic/vfx/slash_encircle/end_all
+scoreboard players remove %vfxSlashEncircle.itt generic.z 1
+execute if score %vfxSlashEncircle.itt generic.z matches 0.. run function packname:generic/vfx/slash_encircle/run
+execute if score %vfxSlashEncircle.itt generic.z matches ..-1 run function packname:generic/vfx/slash_encircle/end_all

@@ -5,4 +5,4 @@ $scoreboard players operation %vfxSlashCrescent.pos $(objective) = %vfxSlashCres
 # calculate step size
 $scoreboard players operation %vfxSlashCrescent.step $(objective) = %vfxSlashCrescent.r2 $(objective)
 $scoreboard players operation %vfxSlashCrescent.step $(objective) -= %vfxSlashCrescent.r $(objective)
-$scoreboard players operation %vfxSlashCrescent.step $(objective) /= %vfxSlashCrescent.accuracy kits.constant
+$scoreboard players operation %vfxSlashCrescent.step $(objective) /= %vfxSlashCrescent.accuracy generic.constant

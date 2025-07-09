@@ -1,4 +1,4 @@
-# example call: function kits:generic/functions/slowcast/hit_end {"slowcaster":"$(slowcaster)","hitEnd":"$(hitEnd)"}
+# example call: function packname:generic/functions/slowcast/hit_end {"slowcaster":"$(slowcaster)","hitEnd":"$(hitEnd)"}
 ## Slowcast Hit End Function
 $$(hitEnd)
 $tag @e[tag=$(slowcaster)] remove $(slowcaster)

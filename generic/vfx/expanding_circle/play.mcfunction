@@ -1,4 +1,4 @@
-# example call: function kits:generic/vfx/expanding_circle/play {"particle":"flame","speed":"0.00000015"}
+# example call: function packname:generic/vfx/expanding_circle/play {"particle":"flame","speed":"0.00000015"}
 ## Plays Expanding Circle
 $particle $(particle) ^-0.01735518616422818 ^-0.09848247312697313 ^0 ^-173551.86164228182 ^-984824.7312697313 ^0 $(speed) 0
 $particle $(particle) ^-0.017382559757426627 ^0.09847764526165059 ^0 ^-173825.59757426628 ^984776.4526165059 ^0 $(speed) 0
