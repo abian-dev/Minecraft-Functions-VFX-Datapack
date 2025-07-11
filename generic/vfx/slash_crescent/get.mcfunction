@@ -37,3 +37,5 @@ scoreboard players operation %vfxSlashCrescent.ttlDist generic.constant *= %vfxS
 
 ## Run
 function packname:generic/vfx/slash_crescent/run
+
+kill @s

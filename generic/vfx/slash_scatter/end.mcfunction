@@ -6,3 +6,5 @@ scoreboard players reset @s generic.z
 scoreboard players reset @s generic.dz
 scoreboard players reset %vfxSlashScatter.dist generic.z
 # generic.dz represents %vfxSlashScatter.num
+
+kill @s

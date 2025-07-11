@@ -21,3 +21,5 @@ scoreboard players reset %vfxSlashEncircle.yaw
 scoreboard players reset %vfxSlashEncircle.pitch
 scoreboard players reset %vfxSlashEncircle.rotMaxRange
 scoreboard players reset %vfxSlashEncircle.itt
+
+kill @s
