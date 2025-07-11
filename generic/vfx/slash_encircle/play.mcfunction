@@ -2,7 +2,7 @@
 # example call: function packname:generic/vfx/slash_encircle/play {"numSlashes":"0","slashMin":"0","inaccuracy":"1","yaw":"200","pitch":"110","vfx":"function"}
 ## Plays Encircling Slash
 # initialize
-function packname:generic/vfx/slash_encircle/end_all
+# function packname:generic/vfx/slash_encircle/end_all
 $scoreboard players set %vfxSlashEncircle.inaccuracy generic.constant $(inaccuracy)
 $scoreboard players set %vfxSlashEncircle.yaw generic.constant $(yaw)
 $scoreboard players set %vfxSlashEncircle.pitch generic.constant $(pitch)
