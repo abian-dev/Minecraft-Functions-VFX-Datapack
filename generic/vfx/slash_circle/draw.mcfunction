@@ -3,6 +3,4 @@ $particle $(particle) ^ ^ ^$(y) 0 0 0 0 1 force
 
 # adds thickness
 scoreboard players reset %vfxSlashCircle.thicknessOffset generic.dz
-scoreboard players reset %vfxSlashCircle.thicknessOffset+Y generic.dz
-scoreboard players reset %vfxSlashCircle.thicknessOffset-Y generic.dz
 execute positioned as @s run function packname:generic/vfx/slash_circle/draw_thickness with storage minecraft:vfx slashCircle

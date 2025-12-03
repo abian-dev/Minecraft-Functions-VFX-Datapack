@@ -40,8 +40,6 @@ scoreboard players reset %vfxSlashCircle.R^2
 scoreboard players reset %vfxSlashCircle.x^2
 
 scoreboard players reset %vfxSlashCircle.thicknessOffset
-scoreboard players reset %vfxSlashCircle.thicknessOffset+Y
-scoreboard players reset %vfxSlashCircle.thicknessOffset-Y
 scoreboard players reset %vfxSlashCircle.thicknessAtStep
 scoreboard players reset %vfxSlashCircle.Bt
 scoreboard players reset %vfxSlashCircle.Bnum

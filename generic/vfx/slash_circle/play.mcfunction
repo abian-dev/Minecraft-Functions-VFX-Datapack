@@ -28,11 +28,9 @@ scoreboard players operation %vfxSlashCircle.maxSteps generic.constant /= %vfxSl
 execute store result storage minecraft:vfx slashCircle.radius int 1 run scoreboard players get %vfxSlashCircle.radius generic.constant
 execute store result storage minecraft:vfx slashCircle.pitch int 1 run scoreboard players get %vfxSlashCircle.pitch generic.constant
 execute store result storage minecraft:vfx slashCircle.thicknessOffset double 0.01 run scoreboard players get %vfxSlashCircle.thicknessOffset generic.dz
-execute store result storage minecraft:vfx slashCircle.thicknessOffsetPosY double 0.01 run scoreboard players get %vfxSlashCircle.thicknessOffset+Y generic.dz
-execute store result storage minecraft:vfx slashCircle.thicknessOffsetNegY double 0.01 run scoreboard players get %vfxSlashCircle.thicknessOffset-Y generic.dz
 $data modify storage minecraft:vfx slashCircle.particle set value "$(particle)"
 
 # summon
-summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:"minecraft:air"},Radius:0f,WaitTime:0,Tags:["vfx","vfxSlashCircle"],Duration:200}
+summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:"minecraft:air"},Radius:0f,WaitTime:0,Tags:["vfx","vfxSlashCircle"],Duration:100}
 tp @e[type=area_effect_cloud,limit=1,sort=nearest,tag=vfxSlashCircle] ~ ~ ~ ~ ~
 execute as @e[type=area_effect_cloud,limit=1,sort=nearest,tag=vfxSlashCircle] at @s run function packname:generic/vfx/slash_circle/get with storage minecraft:vfx slashCircle

@@ -1,4 +1,9 @@
 ## Gets Data
+# get origin (o)
+execute store result storage minecraft:vfx slashCircle.originX double 0.01 run data get entity @s Pos[0] 100
+execute store result storage minecraft:vfx slashCircle.originY double 0.01 run data get entity @s Pos[1] 100
+execute store result storage minecraft:vfx slashCircle.originZ double 0.01 run data get entity @s Pos[2] 100
+
 # get first intercept (r)
 $execute rotated ~ 0 rotated ~90 ~$(pitch) run tp @s ^ ^ ^$(radius)
 execute store result score %vfxSlashCircle.r generic.x run data get entity @s Pos[0] 100
