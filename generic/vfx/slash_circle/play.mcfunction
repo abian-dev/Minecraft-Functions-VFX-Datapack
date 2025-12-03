@@ -1,12 +1,13 @@
 # important: accuracy ∝ radius
-# example call: function packname:generic/vfx/slash_circle/play {"radius":"5","completion":"150","thickness":"1","accuracy":"50","speed":"10","pitch":"0","particle":"flame"}
+# example call: function packname:generic/vfx/slash_circle/play {"radius":"5","completion":"150","thickness":"1","accuracy":"50","acceleration":"0","speed":"10","pitch":"0","particle":"flame"}
 ## Plays Circle Slash
 # initialize
 $scoreboard players set %vfxSlashCircle.radius generic.constant $(radius)
 $scoreboard players set %vfxSlashCircle.completion generic.constant $(completion)
 $scoreboard players set %vfxSlashCircle.thickness generic.constant $(thickness)
 $scoreboard players set %vfxSlashCircle.accuracy generic.constant $(accuracy)
-$scoreboard players set %vfxSlashCircle.speed generic.constant $(speed)
+$scoreboard players set %vfxSlashCircle.acceleration generic.constant $(acceleration)
+$scoreboard players set %vfxSlashCircle.speed generic.dz $(speed)
 $scoreboard players set %vfxSlashCircle.pitch generic.constant $(pitch)
 
 scoreboard players set %vfxSlashCircle.sign generic.dz 1

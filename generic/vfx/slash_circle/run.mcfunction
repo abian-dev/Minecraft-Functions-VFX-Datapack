@@ -21,5 +21,7 @@ execute if score %vfxSlashCircle.diameterSteps generic.dz >= %vfxSlashCircle.acc
 
 # recursive call for draw speed
 scoreboard players add %vfxSlashCircle.runItt generic.dz 1
-execute unless score %vfxSlashCircle.runItt generic.dz > %vfxSlashCircle.speed generic.constant run function packname:generic/vfx/slash_circle/run
-execute if score %vfxSlashCircle.runItt generic.dz > %vfxSlashCircle.speed generic.constant run scoreboard players reset %vfxSlashCircle.runItt generic.dz
+execute unless score %vfxSlashCircle.runItt generic.dz > %vfxSlashCircle.speed generic.dz run function packname:generic/vfx/slash_circle/run
+execute if score %vfxSlashCircle.runItt generic.dz > %vfxSlashCircle.speed generic.dz run scoreboard players set %vfxSlashCircle.runItt generic.dz -1
+execute if score %vfxSlashCircle.runItt generic.dz matches -1 run scoreboard players operation %vfxSlashCircle.speed generic.dz += %vfxSlashCircle.acceleration generic.constant
+execute if score %vfxSlashCircle.runItt generic.dz matches -1 run scoreboard players reset %vfxSlashCircle.runItt generic.dz

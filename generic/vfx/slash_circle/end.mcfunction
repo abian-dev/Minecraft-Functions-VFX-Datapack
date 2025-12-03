@@ -6,6 +6,7 @@ scoreboard players reset %vfxSlashCircle.radius
 scoreboard players reset %vfxSlashCircle.completion
 scoreboard players reset %vfxSlashCircle.thickness
 scoreboard players reset %vfxSlashCircle.accuracy
+scoreboard players reset %vfxSlashCircle.acceleration
 scoreboard players reset %vfxSlashCircle.speed
 scoreboard players reset %vfxSlashCircle.pitch
 
