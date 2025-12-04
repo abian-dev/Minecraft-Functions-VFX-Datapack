@@ -1,7 +1,4 @@
 ## Reset
-# message
-tellraw @a ["",{"text":"restarting generic datapack...","color":"red"}]
-
 # remove storages
 data remove storage genfunc frame
 data remove storage genfunc randomPos
@@ -18,6 +15,7 @@ data remove storage vfx unlimitedVoid
 # remove scoreboards
 scoreboard objectives remove generic.constant
 scoreboard objectives remove generic.math
+scoreboard objectives remove generic.id
 
 scoreboard objectives remove generic.x
 scoreboard objectives remove generic.y
@@ -32,3 +30,4 @@ scoreboard objectives remove generic.frame.rate
 
 scoreboard objectives remove generic.raycast.dist
 scoreboard objectives remove generic.raycast.step
+scoreboard objectives remove generic.raycast.step2
