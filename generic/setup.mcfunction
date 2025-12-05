@@ -17,4 +17,3 @@ scoreboard objectives add generic.frame.rate dummy
 
 scoreboard objectives add generic.raycast.dist dummy
 scoreboard objectives add generic.raycast.step dummy
-scoreboard objectives add generic.raycast.step2 dummy

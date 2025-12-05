@@ -30,4 +30,3 @@ scoreboard objectives remove generic.frame.rate
 
 scoreboard objectives remove generic.raycast.dist
 scoreboard objectives remove generic.raycast.step
-scoreboard objectives remove generic.raycast.step2

@@ -4,6 +4,15 @@
 scoreboard players add %vfx.id generic.id 1
 execute store result storage minecraft:vfx curr.slashCircle.id int 1 run scoreboard players get %vfx.id generic.id
 
+# compute effective duration
+scoreboard players set %vfxSlashCircle.100 generic.constant 100
+$scoreboard players set %vfxSlashCircle.completion generic.constant $(completion)
+$scoreboard players set %vfxSlashCircle.duration generic.constant $(accuracy)
+scoreboard players operation %vfxSlashCircle.duration generic.constant += %vfxSlashCircle.duration generic.constant
+scoreboard players operation %vfxSlashCircle.duration generic.constant *= %vfxSlashCircle.completion generic.constant
+scoreboard players operation %vfxSlashCircle.duration generic.constant /= %vfxSlashCircle.100 generic.constant
+execute store result storage minecraft:vfx curr.slashCircle.duration int 1 run scoreboard players get %vfxSlashCircle.duration generic.constant
+
 # store parameters
 $data modify storage minecraft:vfx curr.slashCircle.radius set value $(radius)
 $data modify storage minecraft:vfx curr.slashCircle.completion set value $(completion)
@@ -16,3 +25,8 @@ $data modify storage minecraft:vfx curr.slashCircle.particle set value "$(partic
 
 # execute
 function packname:generic/vfx/slash_circle/execute with storage minecraft:vfx curr.slashCircle
+
+# reset
+scoreboard players reset %vfxSlashCircle.100
+scoreboard players reset %vfxSlashCircle.completion
+scoreboard players reset %vfxSlashCircle.duration
