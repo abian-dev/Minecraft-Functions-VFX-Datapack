@@ -33,7 +33,7 @@ $data modify storage minecraft:vfx slashCircle.$(id).particle set value "$(parti
 $data modify storage minecraft:vfx slashCircle.$(id).id set value $(id)
 
 # summon
-summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:"minecraft:air"},Radius:0f,WaitTime:0,Tags:["vfx","vfxSlashCircle"],Duration:100}
+$summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:"minecraft:air"},Radius:0f,WaitTime:10,Tags:["vfx","vfxSlashCircle"],Duration:$(accuracy)}
 $scoreboard players set @e[type=area_effect_cloud,limit=1,sort=nearest,tag=vfxSlashCircle] generic.id $(id)
 tp @e[type=area_effect_cloud,limit=1,sort=nearest,tag=vfxSlashCircle] ~ ~ ~ ~ ~
 $execute as @e[type=area_effect_cloud,limit=1,sort=nearest,tag=vfxSlashCircle] at @s run function packname:generic/vfx/slash_circle/get with storage minecraft:vfx slashCircle.$(id)
